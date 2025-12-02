@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Tarefa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cadastro de Nova Tarefa</h1>
+    <a href="index.html" class="voltar">Voltar para Lista</a>
+    
+    <form id="Tarefa">
+        <label>Prioridade:
+            <select id="prioridade">
+                <option value="">Selecione</option>
+                <option value="Baixa">Baixa</option>
+                <option value="Normal">Normal</option>
+                <option value="Urgente">Urgente</option>
+            </select>
+        </label>
+        
+        <label>Descrição:
+            <input type="text" id="descricao">
+        </label>
+        
+        <label>Local:
+            <input type="text" id="local">
+        </label>
+        
+        <label>Recursos Necessários (separe por vírgula):
+            <input type="text" id="recursos" placeholder="Computador, Internet">
+        </label>
+        
+        <label>Data Limite:
+            <input type="date" id="dataLimite">
+        </label>
+        
+        <label>Matrícula:
+            <input type="number" id="matricula">
+        </label>
+        
+        <button type="button" onclick="cadastrar()">Cadastrar</button>
+    </form>
+    
+    <script src="script.js"></script>
+</body>
+</html>
