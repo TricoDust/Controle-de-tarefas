@@ -106,12 +106,29 @@ async function cadastrar() {
         alert("Matrícula deve ser maior que zero!") 
         return }
 
+    var dataLimiteStr = "";
+    var encontrouT = false;
+    for (var i = 0; i < data.length; i++) {
+        var ch = data[i];
+        if (ch == 'T') {
+            dataLimiteStr += ' ';
+            encontrouT = true;
+        } else {
+            dataLimiteStr += ch;
+        }
+    }
+    if (encontrouT) {
+        dataLimiteStr = dataLimiteStr + ":00";
+    } else {
+        dataLimiteStr = data + " 00:00:00";
+    }
+
     var tarefa = {
         prioridade: prio,
         descricao: desc,
         local: local,
         recursosNecessarios: rec,
-        dataLimite: data,
+        dataLimite: dataLimiteStr,
         matricula: mat
     };
 
