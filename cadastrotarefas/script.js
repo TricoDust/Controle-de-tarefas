@@ -62,7 +62,6 @@ function criarTabela(tarefas) {
             recTexto = tarefa.recursosNecessarios
         }
         td4.textContent = recTexto
-        
         td5.textContent = tarefa.dataLimite
         td6.textContent = tarefa.matricula
 
