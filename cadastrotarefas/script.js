@@ -116,11 +116,6 @@ async function cadastrar() {
             dataLimiteStr += ch
         }
     }
-    if (encontrouT) {
-        dataLimiteStr = dataLimiteStr + ":00"
-    } else {
-        dataLimiteStr = data + " 00:00:00"
-    }
 
     var tarefa = {
         prioridade: prio,
@@ -137,17 +132,13 @@ async function cadastrar() {
         body: JSON.stringify(tarefa)
     });
 
-    if (resposta.ok) {
-        alert("Tarefa cadastrada!");
-        document.getElementById('prioridade').value = ""
-        document.getElementById('descricao').value = ""
-        document.getElementById('local').value = ""
-        document.getElementById('recursos').value = ""
-        document.getElementById('dataLimite').value = ""
-        document.getElementById('matricula').value = ""
-    } else {
-        alert("Erro ao cadastrar!")
-    }
+    alert("Tarefa cadastrada!")
+    document.getElementById('prioridade').value = ""
+    document.getElementById('descricao').value = ""
+    document.getElementById('local').value = ""
+    document.getElementById('recursos').value = ""
+    document.getElementById('dataLimite').value = ""
+    document.getElementById('matricula').value = ""
 }
 
 if (document.getElementById('tarefas')) {
