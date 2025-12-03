@@ -10,7 +10,6 @@ h1 {
 }
 
 .voltar {
-    display: inline-block;
     background-color: #007bff;
     color: white;
     padding: 10px 15px;
@@ -24,9 +23,10 @@ h1 {
 }
 
 label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 input{
@@ -51,9 +51,8 @@ button {
     background-color: #28a745;
     color: white;
     padding: 12px 20px;
-    border: none;
+    border: 0;
     border-radius: 4px;
-    cursor: pointer;
     margin-top: 20px;
     font-size: 16px;
 }
@@ -81,19 +80,11 @@ td {
 
 th {
     background-color: #f2f2f2;
-    font-weight: bold;
 }
 
 .urgente {
     color: red;
-    font-weight: bold;
 }
 
-#sem-tarefas {
-    margin-top: 20px;
-    font-style: italic;
-    color: #666;
-    text-align: center;
-    font-size: 18px;
-}
+
 
