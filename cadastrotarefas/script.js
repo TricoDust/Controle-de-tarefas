@@ -3,12 +3,21 @@ async function listar() {
 
     const resposta = await fetch('http://159.65.228.63/tarefas')
     const tarefas = await resposta.json()
-
-    if (tarefas.length == 0) {
-        div.textContent = "Nenhuma tarefa cadastrada"
-        return
+    
+    var temTarefaValida = false
+    var i = 0
+    while (i < tarefas.length) {
+        if (tarefas[i].descricao !== "") {
+            temTarefaValida = true
+        }
+        i++
     }
 
+    if (temTarefaValida === false) {
+        alert('Nenhuma tarefa cadastrada')
+        return
+    }
+    
     criarTabela(tarefas)
 }
 
