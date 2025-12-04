@@ -66,11 +66,8 @@ function criarTabela(tarefas) {
         td2.textContent = tarefa.descricao
         td3.textContent = tarefa.local
         
-        var recTexto = ""
-        if (tarefa.recursosNecessarios != "") {
-            recTexto = tarefa.recursosNecessarios
-        }
-        td4.textContent = recTexto
+        
+        td4.textContent = tarefa.recursosNecessarios
         td5.textContent = tarefa.dataLimite
         td6.textContent = tarefa.matricula
 
